@@ -1,33 +1,64 @@
-# Sistema Supervisorio Java Web
+<div align="center">
 
-##Instalação Física
+# Sistema Supervisório | Java & Arduino
 
-Para realizar a instalação física envolvendo o arduino, seguir o esquema abaixo*:
+### Interface supervisória Java Web integrada a hardware Arduino para estudo de monitoramento e acionamento de dispositivos.
 
-<img src="https://github.com/KalleoLeandro/Sistema-supervisorio-Java/blob/672689551e9ddc7d94b973354b83272b0cd353f6/esquema.png">
+[![GitHub](https://img.shields.io/badge/Ver_no_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/KalleoLeandro/sistema-supervisorio-java)
+![Documentação](https://img.shields.io/badge/Documentação-pt--BR-0F766E?style=for-the-badge)
 
+![Java](https://img.shields.io/badge/Java-26364A?style=for-the-badge&logoColor=white) ![JSF](https://img.shields.io/badge/JSF-26364A?style=for-the-badge&logoColor=white) ![PrimeFaces](https://img.shields.io/badge/PrimeFaces-26364A?style=for-the-badge&logoColor=white) ![Arduino](https://img.shields.io/badge/Arduino-26364A?style=for-the-badge&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-26364A?style=for-the-badge&logoColor=white) ![Maven](https://img.shields.io/badge/Maven-26364A?style=for-the-badge&logoColor=white)
 
-*Para os leds usar resistores de 330 ohms
+</div>
 
+---
 
-##Importação projeto
+## ✨ Visão geral
 
-Importar em sua IDE o projeto Maven Java Primefaces deste projeto.
+Interface supervisória Java Web integrada a hardware Arduino para estudo de monitoramento e acionamento de dispositivos.
 
-Usando como base o IDE Eclipse, clicar em Import -> Exist Maven Projects
+## 🚀 O que você encontra aqui
 
-Clicar em cima do projeto e escolher as opções Maven -> Update Project para puxar as bibliotecas de dependêcias
+- **Interface Java Web com JSF e PrimeFaces**
+- **Comunicação serial por jSerialComm**
+- **Persistência em MySQL**
+- **Diagrama físico da ligação com Arduino**
 
-##Importação Banco de dados
+## 🧰 Tecnologias
 
-Em MySQL, criar uma database de nome mydb(não é obrigatório, mas caso queira um nome diferente, deverá ser modificado no arquivo hibernate do projeto o nome de sua respectiva database).
+`Java`, `JSF`, `PrimeFaces`, `Arduino`, `MySQL`, `Maven`.
 
-Utilizar os comandos de geração contidos neste projeto na pasta database para gerar as tabelas (usar um programa gerencial para importação, tal como o HeidiSQL, pode otimizar o processo).
+## 🖼️ Visão técnica / demonstração
 
-##IMPORTANTE!!!
+![Esquema de hardware](esquema.png)
 
-Existe um pequeno problema neste projeto(aberto a soluções), onde ao sair do sistema e fechar o projeto, a Thread em questão não reabre. Com isso o sistema ao ser fechado só funciona novamente ao resetar o arduino e
-reiniciar o servidor.
+## ▶️ Como explorar / executar
 
+1. Importe o projeto Maven na IDE.
+2. Importe `database/sistema_lampadas.sql` no MySQL.
+3. Ajuste a configuração de banco/porta serial ao seu ambiente.
+4. Faça a montagem de referência usando `esquema.png` e carregue `arduino/supervis_rio.ino` na placa.
+5. Execute o WAR em um servidor compatível com Java EE/`javax.*`.
 
+## 📁 Repositório
 
+```bash
+git clone https://github.com/KalleoLeandro/sistema-supervisorio-java.git
+cd sistema-supervisorio-java
+```
+
+[Consultar os arquivos e o histórico do projeto](https://github.com/KalleoLeandro/sistema-supervisorio-java)
+
+## 📝 Observações
+
+> **Limitação conhecida:** a documentação original relata que a thread serial não reinicia corretamente após fechar a aplicação, sendo necessário reiniciar o Arduino e o servidor.
+
+---
+
+<div align="center">
+
+Desenvolvido e mantido por [Kalleo Leandro](https://github.com/KalleoLeandro).
+
+⭐ Se este projeto for útil, considere deixar uma estrela.
+
+</div>
